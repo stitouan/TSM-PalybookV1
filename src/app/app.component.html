@@ -47,16 +47,15 @@
   <input type="text" name="question0" placholder="question">
   <ul>
   <li *ngFor="let question of questions; let i = index ">
+    <p>{{question.getQuestion()}}</p>
     <div *ngIf="question.getInputType() == 'radio'">
-     <p> {{question.getQuestion()}}</p>
       <div *ngFor="let unRadio of question.getListRadio()">
         <input type="{{question.getInputType()}}" value="{{unRadio}}"/>
         <p>{{unRadio}}</p>
       </div>
-
     </div>
+
     <div *ngIf="question.getInputType() != 'radio'">
-    <p>{{question.getQuestion()}}</p>
     <input *ngIf="question.getInputType() != 'paragraphe'" type="{{question.getInputType()}}" name="question{{i}}"/>
     </div>
   </li>
