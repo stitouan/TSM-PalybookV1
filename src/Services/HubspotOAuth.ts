@@ -5,5 +5,4 @@ export class ConnectionAuth{
   CLIENT_ID = environment.clientId;
   CLIENT_SECRET = environment.clientSecret;
   REDIRECT_URL = environment.redirectUrl;
-  APP = express();
 }
