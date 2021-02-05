@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {Question} from '../class/question';
 import {RadioButton} from '../class/question';
+import {environment} from '../environments/environment';
 import {isEmpty} from 'rxjs/operators';
 
 @Component({
@@ -12,7 +13,10 @@ export class AppComponent {
   title = 'V1playbook';
   questions: Question[] = [];
   question = 'question' ;
+  clientId = environment.clientId;
+  redirecUri = environment.redirectUrl;
   nbQuestion = 0;
+
   addText(): void{
     const theQuestion = new Question(this.question , 'text');
     this.questions.push(theQuestion);

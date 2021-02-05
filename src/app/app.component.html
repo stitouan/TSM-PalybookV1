@@ -38,6 +38,7 @@
     <!-- Keyup sert a detecter la saisie et l'envoi de la value  dans getText -->
   <input type="text" value="" (keyup)="getText($event.target.value)">
   </div>
+  <a href="https://app.hubspot.com/oauth/authorize?client_id={{clientId}}&redirect_uri={{redirecUri}}&scope=contacts%20oauth">Install</a>
   <input type="text" name="firstLabel" [(ngModel)]="question">
   <input type="button" value="champ texte"(click)="addText()">
   <input type="button" value="ajouter paragraphe" (click)="addParagraphe()"/>
